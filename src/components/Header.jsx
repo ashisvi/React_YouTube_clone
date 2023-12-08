@@ -36,7 +36,7 @@ const Header = () => {
   const pageName = pathname.split("/")?.filter(Boolean)?.[0];
 
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 p-2 md:px-5 bg-white dark:bg-black">
+    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 p-2 md:px-5 bg-black">
       {loading && <Loader />}
 
       <div className="flex h-5 items-center">
@@ -54,7 +54,7 @@ const Header = () => {
         )}
         <Link to="/" className="flex h-5 items-center">
           <img
-            className="h-full hidden dark:md:block"
+            className="h-full hidden md:block"
             src={ytLogo}
             alt="Youtube"
           />
@@ -79,11 +79,11 @@ const Header = () => {
           </button>
         </div>
         <div className="flex items-center">
-          <div className="hidden md:flex">
-            <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
+          <div className="flex">
+            <div className="hidden md:flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
               <RiVideoAddLine className="text-white text-xl cursor-pointer" />
             </div>
-            <div className="flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
+            <div className="hidden md:flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
               <FiBell className="text-white text-xl cursor-pointer" />
             </div>
             <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
